@@ -1,5 +1,8 @@
 package Lesson6.Task2;
 
+import lombok.Getter;
+
+@Getter
 public class ToDo {
     int userId;
     int id;
@@ -11,5 +14,19 @@ public class ToDo {
         this.id = id;
         this.title = title;
         this.completed = completed;
+    }
+
+    public void setStatus(boolean status) {
+        this.completed = status;
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "\nuserId=" + userId +
+                "\nid=" + id +
+                "\ntitle='" + title + '\'' +
+                "\ncompleted=" + completed +
+                '}';
     }
 }
